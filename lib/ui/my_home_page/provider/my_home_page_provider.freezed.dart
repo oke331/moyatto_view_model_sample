@@ -18,10 +18,9 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$MyHomePageStateTearOff {
   const _$MyHomePageStateTearOff();
 
-  _MyHomePageState call({bool isUpdating = false, String errorMessage = ''}) {
+  _MyHomePageState call({bool isUpdating = false}) {
     return _MyHomePageState(
       isUpdating: isUpdating,
-      errorMessage: errorMessage,
     );
   }
 }
@@ -32,7 +31,6 @@ const $MyHomePageState = _$MyHomePageStateTearOff();
 /// @nodoc
 mixin _$MyHomePageState {
   bool get isUpdating => throw _privateConstructorUsedError;
-  String get errorMessage => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $MyHomePageStateCopyWith<MyHomePageState> get copyWith =>
@@ -44,7 +42,7 @@ abstract class $MyHomePageStateCopyWith<$Res> {
   factory $MyHomePageStateCopyWith(
           MyHomePageState value, $Res Function(MyHomePageState) then) =
       _$MyHomePageStateCopyWithImpl<$Res>;
-  $Res call({bool isUpdating, String errorMessage});
+  $Res call({bool isUpdating});
 }
 
 /// @nodoc
@@ -59,17 +57,12 @@ class _$MyHomePageStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isUpdating = freezed,
-    Object? errorMessage = freezed,
   }) {
     return _then(_value.copyWith(
       isUpdating: isUpdating == freezed
           ? _value.isUpdating
           : isUpdating // ignore: cast_nullable_to_non_nullable
               as bool,
-      errorMessage: errorMessage == freezed
-          ? _value.errorMessage
-          : errorMessage // ignore: cast_nullable_to_non_nullable
-              as String,
     ));
   }
 }
@@ -81,7 +74,7 @@ abstract class _$MyHomePageStateCopyWith<$Res>
           _MyHomePageState value, $Res Function(_MyHomePageState) then) =
       __$MyHomePageStateCopyWithImpl<$Res>;
   @override
-  $Res call({bool isUpdating, String errorMessage});
+  $Res call({bool isUpdating});
 }
 
 /// @nodoc
@@ -98,17 +91,12 @@ class __$MyHomePageStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isUpdating = freezed,
-    Object? errorMessage = freezed,
   }) {
     return _then(_MyHomePageState(
       isUpdating: isUpdating == freezed
           ? _value.isUpdating
           : isUpdating // ignore: cast_nullable_to_non_nullable
               as bool,
-      errorMessage: errorMessage == freezed
-          ? _value.errorMessage
-          : errorMessage // ignore: cast_nullable_to_non_nullable
-              as String,
     ));
   }
 }
@@ -116,18 +104,15 @@ class __$MyHomePageStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_MyHomePageState implements _MyHomePageState {
-  const _$_MyHomePageState({this.isUpdating = false, this.errorMessage = ''});
+  const _$_MyHomePageState({this.isUpdating = false});
 
   @JsonKey()
   @override
   final bool isUpdating;
-  @JsonKey()
-  @override
-  final String errorMessage;
 
   @override
   String toString() {
-    return 'MyHomePageState(isUpdating: $isUpdating, errorMessage: $errorMessage)';
+    return 'MyHomePageState(isUpdating: $isUpdating)';
   }
 
   @override
@@ -136,16 +121,12 @@ class _$_MyHomePageState implements _MyHomePageState {
         (other.runtimeType == runtimeType &&
             other is _MyHomePageState &&
             const DeepCollectionEquality()
-                .equals(other.isUpdating, isUpdating) &&
-            const DeepCollectionEquality()
-                .equals(other.errorMessage, errorMessage));
+                .equals(other.isUpdating, isUpdating));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(isUpdating),
-      const DeepCollectionEquality().hash(errorMessage));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(isUpdating));
 
   @JsonKey(ignore: true)
   @override
@@ -154,13 +135,10 @@ class _$_MyHomePageState implements _MyHomePageState {
 }
 
 abstract class _MyHomePageState implements MyHomePageState {
-  const factory _MyHomePageState({bool isUpdating, String errorMessage}) =
-      _$_MyHomePageState;
+  const factory _MyHomePageState({bool isUpdating}) = _$_MyHomePageState;
 
   @override
   bool get isUpdating;
-  @override
-  String get errorMessage;
   @override
   @JsonKey(ignore: true)
   _$MyHomePageStateCopyWith<_MyHomePageState> get copyWith =>
