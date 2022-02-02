@@ -1,13 +1,15 @@
-import 'package:minimal_riverpod_sample/resorces/model/counter.dart';
+import 'package:minimal_riverpod_sample/resources/model/counter.dart';
 
 class InMemoryCounterRepository {
   var counter = const Counter(count: 0);
 
-  Counter fetchCount() {
+  Future<Counter> fetchCount() async {
+    await Future.delayed(const Duration(seconds: 1));
     return counter;
   }
 
-  void registerCount({required int count}) {
+  Future<void> registerCount({required int count}) async {
+    await Future.delayed(const Duration(seconds: 1));
     counter = Counter(count: count);
   }
 }
