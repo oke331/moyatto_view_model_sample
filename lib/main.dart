@@ -1,22 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:minimal_riverpod_sample/ui/navigator_provider.dart';
 
 import 'ui/my_home_page/my_home_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ProviderScope(overrides: [
+    navigatorProvider.overrideWithValue(GlobalKey<NavigatorState>())
+  ], child: const MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends HookConsumerWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(),
+      navigatorKey: ref.watch(navigatorProvider),
     );
   }
 }
