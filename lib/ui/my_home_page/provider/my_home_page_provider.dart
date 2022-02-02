@@ -6,7 +6,8 @@ import 'package:minimal_riverpod_sample/ui/navigator_provider.dart';
 
 part 'my_home_page_provider.freezed.dart';
 
-final myHomePageProvider = StateNotifierProvider(
+final myHomePageProvider =
+    StateNotifierProvider<MyHomePageProvider, MyHomePageState>(
   (ref) => MyHomePageProvider(
     ref.watch(counterController.notifier),
     ref.watch(navigatorProvider),

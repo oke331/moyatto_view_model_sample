@@ -26,13 +26,7 @@ class CounterController extends StateNotifier<AsyncValue<Counter>> {
   }
 
   Future<void> registerCount({required int count}) async {
-    repository.registerCount(count: count);
-    AsyncData(count);
+    await repository.registerCount(count: count);
+    state = AsyncData(Counter(count: count));
   }
 }
-
-final countAndUnitTextSelector = Provider((ref) {
-  final count =
-      ref.watch(counterController.select((value) => value.value?.count));
-  return '$count回';
-});
