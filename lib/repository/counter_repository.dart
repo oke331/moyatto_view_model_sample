@@ -1,4 +1,7 @@
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:minimal_riverpod_sample/resources/model/counter.dart';
+
+final counterRepository = Provider((ref) => InMemoryCounterRepository());
 
 class InMemoryCounterRepository {
   var counter = const Counter(count: 0);
