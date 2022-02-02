@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="oke331.minimal_riverpod_sample">
+    package="oke331.moyatto_view_model_sample">
    <application
-        android:label="minimal_riverpod_sample"
+        android:label="moyatto_view_model_sample"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

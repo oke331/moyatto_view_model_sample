@@ -1,6 +1,6 @@
 {
-    "name": "minimal_riverpod_sample",
-    "short_name": "minimal_riverpod_sample",
+    "name": "moyatto_view_model_sample",
+    "short_name": "moyatto_view_model_sample",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
