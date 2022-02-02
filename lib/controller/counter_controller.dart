@@ -14,7 +14,7 @@ class CounterController extends StateNotifier<AsyncValue<Counter>> {
     fetchCount();
   }
 
-  final InMemoryCounterRepository repository;
+  final CounterRepository repository;
 
   Future<void> fetchCount() async {
     state = const AsyncLoading();
