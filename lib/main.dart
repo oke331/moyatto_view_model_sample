@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:minimal_riverpod_sample/presentation/navigator_provider.dart';
 
-import 'presentation/my_home_page/my_home_page.dart';
+import 'presentation/navigator_provider.dart';
+import 'presentation/ui/my_home_page/my_home_page.dart';
 
 void main() {
   runApp(ProviderScope(overrides: [
