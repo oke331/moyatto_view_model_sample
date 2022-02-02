@@ -7,6 +7,7 @@ final counterController =
   (ref) => CounterController(repository: ref.watch(counterRepository)),
 );
 
+/// カウント機能用の状態管理を担うクラス
 class CounterController extends StateNotifier<AsyncValue<Counter>> {
   CounterController({required this.repository})
       : super(const AsyncValue.loading()) {
@@ -26,6 +27,7 @@ class CounterController extends StateNotifier<AsyncValue<Counter>> {
   }
 
   Future<void> registerCount({required int count}) async {
+    // 登録時のエラー処理はprovider側に任せる
     await repository.registerCount(count: count);
     state = AsyncData(Counter(count: count));
   }

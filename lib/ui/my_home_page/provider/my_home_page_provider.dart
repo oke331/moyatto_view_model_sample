@@ -21,6 +21,7 @@ class MyHomePageState with _$MyHomePageState {
   }) = _MyHomePageState;
 }
 
+/// MyHomePageのUI用の状態管理やタップ時のロジックコードなどを担うクラス
 class MyHomePageProvider extends StateNotifier<MyHomePageState> {
   MyHomePageProvider(
     this._counterController,
@@ -38,7 +39,7 @@ class MyHomePageProvider extends StateNotifier<MyHomePageState> {
     state = state.copyWith(isUpdating: true);
 
     try {
-      _counterController.registerCount(count: count + 1);
+      await _counterController.registerCount(count: count + 1);
     } on Exception catch (e) {
       ScaffoldMessenger.of(_navigatorProvider.currentContext!).showSnackBar(
         SnackBar(content: Text(e.toString())),
