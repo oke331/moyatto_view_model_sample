@@ -2,7 +2,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:minimal_riverpod_sample/repository/counter_repository.dart';
 import 'package:minimal_riverpod_sample/resources/model/counter.dart';
 
-final counterController = StateNotifierProvider(
+final counterController =
+    StateNotifierProvider<CounterController, AsyncValue<Counter>>(
   (ref) => CounterController(repository: ref.watch(counterRepository)),
 );
 
@@ -29,3 +30,9 @@ class CounterController extends StateNotifier<AsyncValue<Counter>> {
     AsyncData(count);
   }
 }
+
+final countAndUnitTextSelector = Provider((ref) {
+  final count =
+      ref.watch(counterController.select((value) => value.value?.count));
+  return '$count回';
+});
