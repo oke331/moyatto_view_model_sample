@@ -27,7 +27,7 @@ class CounterController extends StateNotifier<AsyncValue<Counter>> {
   }
 
   Future<void> registerCount({required int count}) async {
-    // 登録時のエラー処理はprovider側に任せる
+    // 登録時のエラー処理はprovider側に任せる感じ？
     await repository.registerCount(count: count);
     state = AsyncData(Counter(count: count));
   }
