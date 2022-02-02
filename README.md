@@ -1,16 +1,10 @@
 # minimal_riverpod_sample
 
-A new Flutter project.
+以前投稿したzennの記事「FlutterのViewModelでモヤっとしていたことを解消したのでメモ」の方法を実際に試してみたサンプルです。  
+https://zenn.dev/oke331/articles/3db9041111ddff
 
-## Getting Started
+ここが微妙などの意見があればtwitterなどでコメントいただければ嬉しいです！  
+twitter: https://twitter.com/oke331
 
-This project is a starting point for a Flutter application.
+※記事では画面ごとのProviderの名称を `Notifier` としていましたが、そのまま画面ごとの状態を提供するという意味で `Provider` の方がわかりよいかと思い、本プロジェクトでは `Provider` にしています。
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
