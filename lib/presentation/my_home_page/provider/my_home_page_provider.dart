@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:minimal_riverpod_sample/controller/counter_controller.dart';
-import 'package:minimal_riverpod_sample/ui/navigator_provider.dart';
+import 'package:minimal_riverpod_sample/presentation/navigator_provider.dart';
 
 part 'my_home_page_provider.freezed.dart';
 

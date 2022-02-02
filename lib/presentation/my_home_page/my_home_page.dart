@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:minimal_riverpod_sample/controller/counter_controller.dart';
-import 'package:minimal_riverpod_sample/ui/my_home_page/provider/my_home_page_provider.dart';
-import 'package:minimal_riverpod_sample/ui/util/modal_progress_indicator.dart';
+import 'package:minimal_riverpod_sample/presentation/my_home_page/provider/my_home_page_provider.dart';
+import 'package:minimal_riverpod_sample/presentation/util/modal_progress_indicator.dart';
 
 class MyHomePage extends HookConsumerWidget {
   const MyHomePage({Key? key}) : super(key: key);

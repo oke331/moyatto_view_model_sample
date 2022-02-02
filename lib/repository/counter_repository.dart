@@ -1,5 +1,5 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:minimal_riverpod_sample/resources/model/counter.dart';
+import 'package:minimal_riverpod_sample/model/counter.dart';
 
 final counterRepository = Provider((ref) => CounterRepository());
 
