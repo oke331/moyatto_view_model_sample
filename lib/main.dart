@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'presentation/navigator_provider.dart';
+import 'presentation/ui/navigator_provider.dart';
 import 'presentation/ui/my_home_page/my_home_page.dart';
 
 void main() {

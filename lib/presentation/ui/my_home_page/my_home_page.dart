@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:minimal_riverpod_sample/presentation/controller/counter_controller.dart';
-import 'package:minimal_riverpod_sample/presentation/util/modal_progress_indicator.dart';
+import 'package:minimal_riverpod_sample/presentation/ui/util/modal_progress_indicator.dart';
 
 import 'provider/my_home_page_provider.dart';
 
